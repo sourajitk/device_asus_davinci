@@ -82,8 +82,14 @@ extern "C" {
 #define PTN_XBL_CFG                     "xbl_config"
 #define PTN_MULTIIMGOEM                 "multiimgoem"
 #define PTN_MULTIIMGQTI                 "multiimgqti"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, PTN_MULTIIMGOEM, PTN_MULTIIMGQTI, "sbl1", "rpm", "tz", "aboot", "abl", "hyp", "lksecapp", "keymaster", "cmnlib", "cmnlib32", "cmnlib64", "pmic", "apdp", "devcfg", "hosd", "keystore", "msadp", "mdtp", "mdtpsecapp", "dsp", "aop", "qupfw", "vbmeta", "dtbo", "imagefv", "ImageFv", "vm-bootsys", "shrm", "cpucp", "uefi", "aop_config", "uefisecapp", "featenabler", "vendor_boot", "recovery", "qweslicstore", "xbl_ramdump"
-#define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "odm", "modem", "bluetooth"
+#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, \
+            "abl", "aop", "bluetooth" "cpucp" "devcfg", "dsp", "dtbo", "featenabler", \
+            "hyp", "imagefv", "keymaster", "multiimgoem", "qupfw", "qweslicstore", "shrm", \
+			"tz", "uefisecapp", "vbmeta_system", "vbmeta", "xbl_config", "xbl_ramdump"
+
+#define AB_PTN_LIST                     PTN_SWAP_LIST, \
+            "boot", "modem", "odm", "product", "system", "system_ext", "vendor", \
+            "vendor_boot"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
 
 /******************************************************************************
