@@ -1,0 +1,4 @@
+service vendor.davinci.vibrator /vendor/bin/hw/android.hardware.vibrator.service.davinci
+    class hal
+    user system
+    group system input
