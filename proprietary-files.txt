@@ -1,0 +1,11 @@
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from Zenfone 9 (32.2030.2030.26). OTAs to extract from can be found
+## here: https://www.asus.com/Mobile/Phones/ZenFone/Zenfone-9/HelpDesk_Download
+
+# Audio
+-vendor/lib/libar-gsl.so
+-vendor/lib/libats.so
+-vendor/lib/liblx-osal.so
+-vendor/lib64/libar-gsl.so
+-vendor/lib64/libats.so
+-vendor/lib64/liblx-osal.so
