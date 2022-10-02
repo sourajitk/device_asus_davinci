@@ -49,14 +49,6 @@ while [ "${#}" -gt 0 ]; do
     shift
 done
 
-function blob_fixup() {
-    case "${1}" in
-        system_ext/lib/libwfdnative.so | system_ext/lib64/libwfdnative.so )
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-            ;;
-    esac
-}
-
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
