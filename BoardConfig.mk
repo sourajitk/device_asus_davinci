@@ -66,8 +66,11 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_SCREEN_DENSITY := 440
 
 # HIDL
-DEVICE_MANIFEST_SKUS := taro
-DEVICE_MANIFEST_TARO_FILES := $(DEVICE_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/asus_framework_matrix.xml
+
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/manifest.xml
 
 DEVICE_MATRIX_FILE += \
     device/qcom/common/compatibility_matrix.xml

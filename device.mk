@@ -72,7 +72,12 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.common-V2-ndk_platform.vendor \
-    vendor.qti.hardware.display.config-V2-ndk_platform
+    vendor.qti.hardware.display.config-V1-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V3-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V4-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V5-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V6-ndk_platform.vendor
 
 # Dumpstate
 PRODUCT_PACKAGES += \
@@ -121,7 +126,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster-V3-ndk_platform.vendor
+    android.hardware.keymaster-V3-ndk_platform.vendor \
+    libkeymaster_messages.vendor
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -136,6 +142,10 @@ PRODUCT_PACKAGES += \
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks-V1-ndk_platform.vendor
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -145,6 +155,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# QCC
+PRODUCT_PACKAGES += \
+    libgrpc++_unsecure.vendor
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
