@@ -107,6 +107,12 @@ PRODUCT_PACKAGES += \
     ssgqmigd.rc \
     ueventd.asus.rc
 
+# Kernel Binary
+TARGET_KERNEL_DIR ?= device/asus/davinci-kernel
+LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
 # Keymaster
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
