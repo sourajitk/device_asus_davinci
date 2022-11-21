@@ -134,6 +134,16 @@ PRODUCT_PACKAGES += \
     ssgqmigd.rc \
     ueventd.asus.rc
 
+# Media
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore \
+    libplatformconfig \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor
+
+PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+
 # Kernel Binary
 TARGET_KERNEL_DIR ?= device/asus/davinci-kernel
 LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
