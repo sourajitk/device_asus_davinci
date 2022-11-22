@@ -149,6 +149,12 @@ PRODUCT_PACKAGES += \
     ssgqmigd.rc \
     ueventd.asus.rc
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
+
 # Media
 PRODUCT_PACKAGES += \
     libmm-omxcore \
