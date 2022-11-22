@@ -1132,6 +1132,15 @@ vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
+# MMI
+vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
+vendor/bin/mmid
+vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
+vendor/etc/permissions/android.hardware.light.xml
+vendor/etc/permissions/vendor.qti.hardware.factory.xml
+vendor/lib64/vendor.qti.hardware.factory@1.0.so
+vendor/lib64/vendor.qti.hardware.factory@1.1.so
+
 # Memory
 vendor/lib64/libvmmem.so
 
