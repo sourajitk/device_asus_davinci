@@ -188,6 +188,10 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     libkeymaster_messages.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.lights.service
+
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
