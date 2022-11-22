@@ -107,7 +107,11 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V5-ndk_platform.vendor \
-    vendor.qti.hardware.memtrack-service
+    vendor.qti.hardware.memtrack-service \
+    libfilefinder \
+    vendor.qti.hardware.display.demura-service.rc \
+    vendor.qti.hardware.display.demura-service.xml \
+    vendor.qti.hardware.display.demura-service
 
 # Fastboot
 PRODUCT_PACKAGES += \
