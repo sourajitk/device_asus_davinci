@@ -170,6 +170,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
 
 # Kernel Binary
+TARGET_KERNEL_VERSION ?= 5.10
 TARGET_KERNEL_DIR ?= device/asus/davinci-kernel
 LOCAL_KERNEL := $(TARGET_KERNEL_DIR)/Image
 
@@ -296,6 +297,7 @@ PRODUCT_PACKAGES += \
     update_engine_sideload
 
 # USB
+TARGET_HAS_DIAG_ROUTER := true
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
 PRODUCT_COPY_FILES += \
