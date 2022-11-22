@@ -150,6 +150,11 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.asus.rc \
     init.target.rc \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.early_boot.sh \
+    init.qti.ufs.rc \
+    init.qti.kernel.rc \
     ssgqmigd.rc \
     ueventd.asus.rc
 

@@ -31,6 +31,39 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "init.qti.kernel.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.ufs.rc",
+    src: "init.qti.ufs.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "init.qcom.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd.asus.rc",
     filename: "ueventd.rc",
     src: "ueventd.asus.rc",
