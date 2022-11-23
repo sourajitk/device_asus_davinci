@@ -138,6 +138,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport.vendor \
+    libhwbinder.vendor
+
 # Identity
 PRODUCT_PACKAGES += \
     android.hardware.identity-V3-ndk_platform.vendor
