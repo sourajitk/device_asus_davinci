@@ -201,7 +201,9 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.lights.service
+    vendor.qti.hardware.lights.service \
+    libtinyxml \
+    lights.qcom
 
 # Media
 PRODUCT_COPY_FILES += \
