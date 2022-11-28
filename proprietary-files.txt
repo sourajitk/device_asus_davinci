@@ -208,6 +208,8 @@ vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib/libCB.so
+vendor/lib/libEGL_adreno.so
+vendor/lib/libGLESv2_adreno.so
 vendor/lib/libOpenCL.so
 vendor/lib/libadreno_app_profiles.so
 vendor/lib/libadreno_utils.so
@@ -225,6 +227,8 @@ vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libCB.so
+vendor/lib64/libEGL_adreno.so
+vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
