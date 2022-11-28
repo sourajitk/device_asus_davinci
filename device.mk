@@ -203,16 +203,6 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
 
-# Media
-PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libOmxCore \
-    libplatformconfig \
-    libcodec2_vndk.vendor \
-    libcodec2_hidl@1.0.vendor
-
-PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
-
 # Kernel Binary
 TARGET_KERNEL_VERSION ?= 5.10
 TARGET_KERNEL_DIR ?= device/asus/davinci-kernel
@@ -255,7 +245,10 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
     libmm-omxcore \
     libstagefright_softomx.vendor \
-    libstagefrighthw
+    libstagefrighthw \
+    libplatformconfig
+
+PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
 
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
