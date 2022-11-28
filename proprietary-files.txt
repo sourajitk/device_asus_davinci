@@ -1050,6 +1050,21 @@ vendor/lib64/vendor.qti.ims.rcsuce@1.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
+# Init
+vendor/bin/init.class_main.sh	
+vendor/bin/init.crda.sh	
+vendor/bin/init.kernel.post_boot-cape.sh	
+vendor/bin/init.kernel.post_boot-diwali.sh	
+vendor/bin/init.kernel.post_boot.sh	
+vendor/bin/init.kernel.post_boot-taro.sh	
+vendor/bin/init.mdm.sh	
+vendor/bin/init.qcom.class_core.sh	
+vendor/bin/init.qcom.coex.sh
+vendor/bin/init.qcom.efs.sync.sh	
+vendor/bin/init.qcom.post_boot.sh	
+vendor/bin/init.qcom.sdio.sh
+vendor/bin/init.qti.kernel.sh
+
 # Identity
 vendor/bin/hw/android.hardware.identity-service-qti
 vendor/etc/init/android.hardware.identity-service-qti.rc
