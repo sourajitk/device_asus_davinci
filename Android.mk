@@ -99,4 +99,6 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(ASUSFW_MOUNT_POINT) \
     $(FACTORY_MOUNT_POINT_SYMLINK)
 
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
 endif
