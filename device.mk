@@ -395,6 +395,7 @@ PRODUCT_PACKAGES += \
     hostapd_default.conf \
     libqsap_sdk \
     libwifi-hal-qcom \
+    wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
 

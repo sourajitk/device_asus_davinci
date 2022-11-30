@@ -1585,11 +1585,25 @@ vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v_unsigned.mbn
 
 # WLAN
+vendor/bin/athdiag
 vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
+vendor/bin/hal_proxy_daemon
+vendor/bin/myftm
+vendor/bin/pktlogconf
+vendor/bin/spectraltool
+vendor/bin/vendor_cmd_tool
+vendor/bin/wificfrtool
+vendor/bin/wifilearner
+vendor/etc/init/vendor.qti.hardware.wifi.wificfr@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
 vendor/firmware/bdwlan.elf
 vendor/firmware/bdwlang.elf
+vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
+vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
