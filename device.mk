@@ -254,14 +254,21 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxCore \
+    libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
+    libgui_vendor \
     libmm-omxcore \
+    libplatformconfig \
     libstagefright_softomx.vendor \
     libstagefrighthw \
-    libplatformconfig
 
 PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.media.recorder-max-base-layer-fps=60
 
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
