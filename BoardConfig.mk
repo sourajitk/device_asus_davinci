@@ -83,13 +83,15 @@ TARGET_SCREEN_DENSITY := 440
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/asus_framework_matrix.xml
+    $(DEVICE_PATH)/asus_framework_matrix.xml \
+    $(DEVICE_PATH)/lineage_framework_matrix.xml \
+    $(DEVICE_PATH)/qcom_framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/asus_manifest.xml \
     $(DEVICE_PATH)/manifest.xml
 
-DEVICE_MATRIX_FILE += \
+DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Hacks
