@@ -195,7 +195,8 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     ssgqmigd.rc \
     ueventd.asus.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    vendor_modprobe.sh
 
 # IPACM
 PRODUCT_PACKAGES += \
