@@ -106,6 +106,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V1-ndk_platform.vendor \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.graphics.mapper-impl-qti-display.xml \
     vendor.qti.hardware.display.mapper@4.0.vendor \
@@ -125,6 +126,8 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.vendor \
     libdisplayconfig.qti.vendor \
+    libqdutils \
+    libqservice \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.config.vendor \
     init.qti.display_boot.sh \
@@ -136,6 +139,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.demura-service.rc \
     vendor.qti.hardware.display.demura-service.xml \
     vendor.qti.hardware.display.demura-service
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Fastboot
 PRODUCT_PACKAGES += \
