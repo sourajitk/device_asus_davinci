@@ -195,6 +195,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.asus.rc \
     init.target.rc \
+    init.recovery.qcom.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.early_boot.sh \
