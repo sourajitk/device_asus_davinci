@@ -197,6 +197,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.recovery.qcom.rc \
     init.qcom.rc \
+    init.class_main.sh \
     init.qcom.sh \
     init.qcom.early_boot.sh \
     init.qti.ufs.rc \
