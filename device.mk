@@ -47,7 +47,9 @@ $(call soong_config_set,android_hardware_audio,run_64bit,true)
 # Pick up split makefile
 $(call inherit-product, hardware/qcom-caf/sm8450/audio/configs/taro/taro.mk)
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service
+    android.hardware.audio.service \
+    libtinycompress \
+    vendor.qti.hardware.pal@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape_qssi/audio_policy_configuration.xml \
@@ -64,10 +66,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth@1.1.vendor \
     audio.bluetooth.default \
     com.dsi.ant@1.0.vendor \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
@@ -103,6 +106,10 @@ PRODUCT_PACKAGES += \
 
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
+# Data
+PRODUCT_PACKAGES += \
+    librmnetctl
 
 # Display
 PRODUCT_PACKAGES += \
@@ -178,7 +185,7 @@ PRODUCT_BOARD_PLATFORM := taro
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
 # HIDL
@@ -330,7 +337,6 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 PRODUCT_PACKAGES += \
     libjson \
-    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor
 
 # Ramdisk
@@ -413,6 +419,10 @@ PRODUCT_COPY_FILES += \
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# VND FWK
+PRODUCT_PACKAGES += \
+   libqti_vndfwk_detect_vendor
 
 # VNDK
 PRODUCT_COPY_FILES += \
