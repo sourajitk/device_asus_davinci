@@ -1641,6 +1641,12 @@ vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
 vendor/firmware/bdwlan.elf
 vendor/firmware/bdwlang.elf
+vendor/firmware/qca6490/amss20.bin
+vendor/firmware/qca6490/bdwlan.elf
+vendor/firmware/qca6490/Data20.msc
+vendor/firmware/qca6490/m3.bin
+vendor/firmware/qca6490/bdwlang.elf
+vendor/firmware/qca6490/regdb.bin
 vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 
