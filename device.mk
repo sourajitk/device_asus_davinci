@@ -135,13 +135,24 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti.vendor \
     libqdutils \
     libqservice \
+    vendor.display.config@1.11.vendor \
     vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.config.vendor \
     init.qti.display_boot.sh \
     init.qti.display_boot.rc \
+    vendor.qti.hardware.display.config-V1-ndk.vendor \
+    vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V3-ndk.vendor \
+    vendor.qti.hardware.display.config-V4-ndk.vendor \
+    vendor.qti.hardware.display.config-V5-ndk.vendor \
+    vendor.qti.hardware.display.config-V6-ndk.vendor \
+    vendor.qti.hardware.display.config-V1-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V2-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V3-ndk_platform.vendor \
+    vendor.qti.hardware.display.config-V4-ndk_platform.vendor \
     vendor.qti.hardware.display.config-V5-ndk_platform.vendor \
-    vendor.qti.hardware.memtrack-service \
+    vendor.qti.hardware.display.config-V6-ndk_platform.vendor \
     libfilefinder \
     vendor.qti.hardware.display.demura-service.rc \
     vendor.qti.hardware.display.demura-service.xml \
@@ -175,9 +186,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.backup.ntpServer="0.pool.ntp.org"
-
-# GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Hardware
 PRODUCT_USES_QCOM_HARDWARE := true
@@ -278,7 +286,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+    media.settings.xml=/vendor/etc/media_profiles_taro.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
@@ -337,7 +345,8 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 PRODUCT_PACKAGES += \
     libjson \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor \
+    libvndfwk_detect_jni.qti_vendor
 
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
@@ -374,7 +383,25 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     android.hardware.wifi.hostapd@1.0.vendor \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    ims-ext-common \
+    ims_ext_common.xml \
+    telephony-ext \
+    qti-telephony-hidl-wrapper \
+    qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper.xml \
+    qti_telephony_hidl_wrapper_prd.xml \
+    qti-telephony-utils \
+    qti-telephony-utils-prd \
+    qti_telephony_utils.xml \
+    qti_telephony_utils_prd.xml
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.radio.multisim.config=dsds \
@@ -433,8 +460,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator.service.davinci
+$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
 # WLAN
 PRODUCT_COPY_FILES += \
