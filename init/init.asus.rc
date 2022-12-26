@@ -35,3 +35,8 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     write /sys/class/asuslib/boot_completed 1
+
+on property:ro.boot.country_code=JP
+    # NFC
+    setprop ro.boot.product.hardware.sku eSE
+    start vendor.secure_element_hal_service_1_2
