@@ -289,6 +289,18 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
+# NFC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/android.hardware.se.omapi.ese.xml \
+    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/android.hardware.se.omapi.uicc.xml
+
+PRODUCT_PACKAGES += \
+    NfcNci \
+    android.hardware.nfc@1.2-service \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.secure_element@1.2-service \
+    libchrome.vendor
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
