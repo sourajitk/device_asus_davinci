@@ -40,3 +40,15 @@ on property:ro.boot.country_code=JP
     # NFC
     setprop ro.boot.product.hardware.sku eSE
     start vendor.secure_element_hal_service_1_2
+
+service vendor.secure_element_hal_service_1_2 /vendor/bin/hw/android.hardware.secure_element@1.2-service.p73
+    class hal
+    override
+    disabled
+    interface android.hardware.secure_element@1.0::ISecureElement eSE1
+    interface android.hardware.secure_element@1.1::ISecureElement eSE1
+    interface android.hardware.secure_element@1.2::ISecureElement eSE1
+    interface vendor.nxp.nxpese@1.0::INxpEse default
+    interface vendor.nxp.eventprocessor@1.0::INxpEseEvtProcessor default
+    user secure_element
+    group secure_element
