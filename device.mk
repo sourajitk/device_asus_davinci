@@ -297,8 +297,7 @@ NEED_AIDL_NDK_PLATFORM_BACKEND := true
 PRODUCT_PACKAGES += \
     NfcNci \
     android.hardware.nfc@1.2-service \
-    android.hardware.secure_element@1.2-service.p73 \
-    android.hardware.secure_element@1.2-service.p73.xml \
+    android.hardware.secure_element@1.1-service \
     libchrome.vendor
 
 PRODUCT_COPY_FILES += \
