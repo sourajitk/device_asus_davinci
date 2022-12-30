@@ -294,10 +294,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
 # NFC
-$(call inherit-product, vendor/nxp/nfc/nfc-vendor-product.mk)
-$(call inherit-product, vendor/nxp/secure_element/se-vendor-product.mk)
-
-PRODUCT_USES_ESE := false
+PRODUCT_PACKAGES += \
+    NfcNci \
+    android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.2-service.p73 \
+    android.hardware.secure_element@1.2-service.p73.xml \
+    libchrome.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
